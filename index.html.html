@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canoe Atlanta | Riverside Fine Dining</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #f6f6f6, #ececec);
+            color: #222;
+            perspective: 1200px;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #0c2a2a, #163f3f);
+            color: white;
+            padding: 18px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transform-style: preserve-3d;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            letter-spacing: 1px;
+            transform: translateZ(20px);
+        }
+
+        nav a {
+            color: white;
+            margin-left: 25px;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+            transform-style: preserve-3d;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+            transform: translateZ(15px);
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            background: url("https://images.unsplash.com/photo-1528605248644-14dd04022da1") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+        }
+
+        .hero h2 {
+            position: relative;
+            background: rgba(0,0,0,0.65);
+            padding: 22px 34px;
+            font-size: 42px;
+            border-radius: 10px;
+            transform: translateZ(40px);
+            transition: transform 0.5s ease;
+        }
+
+        .hero h2:hover {
+            transform: rotateY(15deg) rotateX(5deg) translateZ(50px);
+        }
+
+        section {
+            padding: 100px 50px;
+            max-width: 1100px;
+            margin: auto;
+            scroll-margin-top: 90px;
+            transform-style: preserve-3d;
+        }
+
+        section h3 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #0c2a2a;
+            transform: translateZ(20px);
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.7;
+            text-align: center;
+            transform: translateZ(10px);
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            margin: 12px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #0c2a2a, #163f3f);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.4s;
+            transform-style: preserve-3d;
+        }
+
+        .btn:hover {
+            transform: translateZ(20px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 45px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: 0.5s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover {
+            transform: rotateY(12deg) rotateX(6deg) translateZ(20px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+        }
+
+        .card h4 {
+            margin-top: 0;
+            color: #0c2a2a;
+            transform: translateZ(15px);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0c2a2a, #163f3f);
+            color: #ccc;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px 20px;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Canoe Atlanta</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#actions">Reserve</a>
+        <a href="#features">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Riverside Fine Dining on the Chattahoochee</h2>
+</div>
+
+<section id="about">
+    <h3>About Canoe</h3>
+    <p>
+        Canoe is a celebrated fine dining restaurant located along the Chattahoochee River
+        in Atlanta’s historic Vinings district, known for seasonal cuisine and refined
+        riverside dining.
+    </p>
+</section>
+
+<section id="actions">
+    <h3>Plan Your Visit</h3>
+    <div style="text-align:center">
+        <a class="btn" href="https://www.opentable.com/r/canoe-atlanta" target="_blank">Reserve a Table</a>
+        <a class="btn" href="https://canoeatl.com/menu/" target="_blank">View Menu</a>
+        <a class="btn" href="https://canoeatl.com/events/" target="_blank">Host an Event</a>
+    </div>
+</section>
+
+<section id="features">
+    <h3>The Canoe Experience</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>Waterfront Setting</h4>
+            <p>Scenic riverside views ideal for romantic dining.</p>
+        </div>
+        <div class="card">
+            <h4>Seasonal Cuisine</h4>
+            <p>Menus crafted with fresh, seasonal ingredients.</p>
+        </div>
+        <div class="card">
+            <h4>Brunch & Events</h4>
+            <p>Popular brunch and elegant private dining spaces.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h3>Location & Contact</h3>
+    <p>
+        4199 Paces Ferry Rd SE, Atlanta, GA 30339 <br>
+        (770) 432-2663
+    </p>
+    <div style="text-align:center">
+        <a class="btn" href="https://linktr.ee/canoeatl" target="_blank">Visit Linktree</a>
+    </div>
+</section>
+
+<footer>
+    © 2025 Canoe Atlanta • All Rights Reserved
+</footer>
+
+</body>
+</html>
